@@ -1,0 +1,355 @@
+:root {
+
+    --gradient: hsl(6, 100%, 93%);
+    --gradient_1: hsl(334,100%, 65%);
+
+    --pale_blue: hsl(243, 100%, 93%);
+    --grayish_blue: hsl(229, 7%, 55%);
+    --dark_blue: hsl(228, 57%, 26%);
+    --very_dark_blue: hsl(229, 57%, 11%);
+}
+
+*, 
+*::before,
+*::after {
+
+    box-sizing: border-box;
+}
+
+html, body {
+
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+
+    background-color: var(--very_dark_blue);
+    max-width: 144rem;
+    min-width: 30rem;
+    margin: 0 auto;
+    
+}
+
+p {
+    color: var(--pale_blue);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+b {
+    font-weight: 700;
+}
+
+
+
+/* Desktop version */
+
+.main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: 50% 75%;
+}
+
+.section_flex {
+
+    display: flex;
+    
+}
+
+/* icon container  */
+
+.icon_container {
+
+   
+    margin-right: 3rem;
+    background-color: var(--dark_blue);
+    width: 35rem;
+    height: 20.1rem;
+    border-radius: 1rem 10rem 1rem 1rem;
+    padding: 4rem;
+}
+
+.icon_container_icons {
+
+  /*   border: 2px solid magenta; */
+    display: flex;
+    justify-content: flex-start;
+    height: 8rem;
+    
+}
+
+.icons {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very_dark_blue);
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 1rem;
+    margin-right: 2rem;
+}
+
+
+.icon_container_logo {
+
+    display: flex;
+    align-items: center;
+   /*  border: 2px solid black; */
+    height: 8rem;
+    
+}
+
+.icon_container_logo > img {
+
+    width: 13.5rem;
+    height: 4rem;
+    margin-bottom: 1.6rem;
+}
+
+
+
+/* Progress container section */
+
+
+
+
+.progress_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark_blue);
+    width: 54rem;
+    height: 20.1rem;
+    border-radius: 1rem;
+}
+
+.progress_container_content {
+
+    font-weight: 400;
+}
+
+.progress_bar_container {
+
+    display: flex;
+    flex-direction: column;
+
+}
+.progress_bar_text {
+
+    display: flex;
+    justify-content: space-between
+}
+
+.progress_bar {
+
+    width: 46rem;
+    height: 2rem;
+    background-color: var(--very_dark_blue);
+    border-radius: 1rem;
+}
+
+.progress_bar_fill {
+
+    position: relative;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, var(--gradient) , var(--gradient_1));
+    width: 33.9rem;
+    height: 100%;
+
+}
+
+.progress_bar_fill::after {
+
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    right: 0%;
+
+}
+
+
+/* Speech bubble */
+
+.speech_bubble {
+
+    position: absolute;
+    width: 17.9rem;
+    height: 7.2rem;
+    background-color:#fff;
+    border-radius: 1rem 1rem 0 1rem;
+    top: -20%;
+    right: 8%;
+}
+
+
+.speech_bubble::after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    border-style: solid;
+    border-color:transparent #fff transparent transparent;
+    top: 95%;
+    left: 87%;
+    bottom: -23px;
+    border-width: 0pt 2.3rem 2.2rem 0;
+   
+
+}
+
+.speech_bubble_flex {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.bubble_bold {
+
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--very_dark_blue);
+}
+
+.bubble_tiny {
+
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--very_dark_blue);
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+}
+
+
+
+
+
+
+
+/* Mobile version 414px */
+
+
+@media (max-width: 414px) {
+
+
+    body {
+
+        max-width: 41.4rem;
+        min-width: 30rem;
+
+    
+    }
+
+    .main {
+
+        background-image: url(/images/bg-mobile.png);
+        background-size: 100vh;
+        background-size: 100vw;
+
+        
+    }
+
+    .section_flex {
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+   .icon_container {
+
+    width: 32.6rem;
+    height: 20.1rem;
+    margin: 0;
+   }
+    
+
+
+
+
+   .progress_container {
+
+    width: 32.6rem;
+    height: 19.6rem;
+    margin-top: 2rem;
+    
+   }
+
+   .progress_bar {
+
+    width: 26.2rem;
+    height: 2rem;
+
+   }
+
+   .progress_bar_fill {
+
+        
+    width: 19.3rem;
+    height: 2rem;
+  }
+
+
+
+
+  /* speech bubble */
+
+
+  .speech_bubble {
+
+    border-radius: 1rem 1rem 1rem 1rem;
+    top: 80%;
+    right: 25%;
+  }
+
+
+  .speech_bubble::after {
+
+    display: none;
+  }
+}
+
+
+/* Mobile version 375px */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
